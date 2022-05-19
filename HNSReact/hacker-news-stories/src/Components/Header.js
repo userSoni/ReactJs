@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <React.Fragment>
-          <h1>Hacker News Clone</h1>
+          <h1>Hacker News Stories</h1>
           <div className="nav-link">
             <NavLink to="/top" activeClassName="active">
               Top Stories
@@ -16,6 +16,9 @@ const Header = () => {
             </NavLink>
             <NavLink to="/best" activeClassName="active">
               Best Stories
+            </NavLink>
+            <NavLink to="/user" activeClassName="active">
+              Hacker User
             </NavLink>
           </div>
         </React.Fragment>

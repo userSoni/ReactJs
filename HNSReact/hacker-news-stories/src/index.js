@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './Styles/style.scss';
 import AppRouter from './Routers/AppRouter';
 // import reportWebVitals from './reportWebVitals';
