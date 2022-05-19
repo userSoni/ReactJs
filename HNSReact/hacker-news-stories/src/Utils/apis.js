@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Base_API_URL } from "./contants";
 
-const getStory = async (id) => {
+export const getStory = async (id) => {
     try {
         const story = await axios.get(`${Base_API_URL}/item/${id}.json`);
         return story;
@@ -13,7 +13,7 @@ const getStory = async (id) => {
 export const getStories = async (type) => {
     try {
         const { data: storyIds }= await axios.get(
-            `${Base_API_URL}/${type}topstories.json`
+            `${Base_API_URL}/topstories.json`
             );
             const stories = await Promise.all(storyIds.slice(0, 30).map(getStory))
             return stories;

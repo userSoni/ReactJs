@@ -3,7 +3,8 @@ import Header from "../Components/Header.js";
 import HomePage from "../Components/HomePage.js";
 import PageNotFound from "../Components/NotFound.js";
 import ShowStories from "../Components/ShowStories.js";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import '../Styles/style.scss';
 
 const AppRouter = () => {
     return (

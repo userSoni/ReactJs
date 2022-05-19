@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { getStories } from "../Utils/apis.js";
 
-const fetchData = (type) => {
-    const [stories, setStories] = useState([]);
+const fetchData = ({type}) => {
+    const [stories, setStories] = useState({});
     const [isLoading, setIsLoading] = useState(false);
   
     useEffect(() => {
@@ -15,7 +15,7 @@ const fetchData = (type) => {
         .catch(() => {
           setIsLoading(false);
         });
-    }, []);
+    }, [type]);
   
     return { isLoading, stories };
 };

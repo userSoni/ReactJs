@@ -1,10 +1,10 @@
 import React from "react";
 import Story from './Story';
-import fetchData from "../Hooks/getData.js";
+import fetchData from "../Hooks/getData";
 
-const ShowStories = (props) => {
-    const { type } = props.match.params;
-    const { isLoading, stories } = fetchData(type);
+const ShowStories = ({type}) => {
+    // const { type } = props.match.params;
+    const { isLoading, stories } = fetchData(type ? type : 'top');
 
     return(
         <React.Fragment>
